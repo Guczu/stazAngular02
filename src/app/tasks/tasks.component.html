@@ -1,16 +1,12 @@
 <table>
   <thead>
     <tr>
-      <th>Nazwa</th>
-      <th>Typ danych</th>
-      <th>Liczba zadań</th>
+      <th *ngFor="let item of (customTasks.length > 0 ? customTasks[0] : tasks[0]) | keyvalue:onCompare">{{item.key | titlecase}}</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let task of tasks">
-      <td>{{task.name}}</td>
-      <td title={{task.data_type}}><span>{{task.data_type}}</span></td>
-      <td>{{task.amount}}</td>
+    <tr *ngFor="let task of customTasks.length > 0 ? customTasks : tasks">
+      <td *ngFor="let item of task | keyvalue:onCompare" title={{item.value}}>{{item.value}}</td>
     </tr>
   </tbody>
 </table>
