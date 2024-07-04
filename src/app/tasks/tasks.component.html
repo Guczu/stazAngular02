@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nazwa</th>
+      <th>Typ danych</th>
+      <th>Liczba zadań</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>{{task.name}}</td>
+      <td title={{task.data_type}}><span>{{task.data_type}}</span></td>
+      <td>{{task.amount}}</td>
+    </tr>
+  </tbody>
+</table>

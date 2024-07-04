@@ -1,0 +1,29 @@
+* {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+table {
+  border-spacing: 0px;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px 16px;
+}
+
+td:nth-child(1) {
+  white-space: nowrap;
+}
+
+td:nth-child(2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 0;
+  min-width: 100%;
+}
+
+td {
+  border-top: 1px solid #e3e3fa;
+}
