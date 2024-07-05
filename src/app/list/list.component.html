@@ -1,0 +1,6 @@
+<table *ngIf="list | async">
+  <ng-content select="app-list-header"></ng-content>
+  <tbody>
+    <ng-content select="app-list-row"></ng-content>
+  </tbody>
+</table>

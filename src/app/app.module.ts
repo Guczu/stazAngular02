@@ -4,15 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
-import { TruncatePipe } from './pipes/truncate.pipe';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { ListComponent } from './list/list.component';
+import { DataTypePipe } from './pipes/data-type.pipe';
+import { ListHeaderComponent } from './list-header/list-header.component';
+import { ListRowComponent } from './list-row/list-row.component';
+import { ListCellComponent } from './list-cell/list-cell.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TasksComponent,
-    TruncatePipe,
-    DashboardComponent
+    DataTypePipe,
+    ListComponent,
+    ListHeaderComponent,
+    ListRowComponent,
+    ListCellComponent
   ],
   imports: [
     BrowserModule,

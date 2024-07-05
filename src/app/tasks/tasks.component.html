@@ -1,12 +1,8 @@
-<table>
-  <thead>
-    <tr>
-      <th *ngFor="let item of (customTasks.length > 0 ? customTasks[0] : tasks[0]) | keyvalue:onCompare">{{item.key | titlecase}}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let task of customTasks.length > 0 ? customTasks : tasks">
-      <td *ngFor="let item of task | keyvalue:onCompare" title={{item.value}}>{{item.value}}</td>
-    </tr>
-  </tbody>
-</table>
+<app-list [list]="tasks">
+  <app-list-header [headers]="headers"></app-list-header>
+  <app-list-row *ngFor="let row of tasks | async">
+    <app-list-cell>{{row.name}}</app-list-cell>
+    <app-list-cell>{{row.data_type | dataType}}</app-list-cell>
+    <app-list-cell>{{row.amount}}</app-list-cell>
+  </app-list-row>
+</app-list>
