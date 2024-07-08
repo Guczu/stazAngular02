@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import Task from '../task';
+import { Task } from '../task';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -9,5 +9,4 @@ import { Observable } from 'rxjs';
 })
 export class ListComponent {
   @Input() list?: Observable<Task[]>;
-  @Input() headers?: string[];
 }

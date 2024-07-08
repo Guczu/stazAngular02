@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import Task from './task';
+import { Task } from './task';
 import { TASKS } from './mock-tasks';
 import { delay, Observable, of } from 'rxjs';
 

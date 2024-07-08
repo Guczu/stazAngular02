@@ -1,0 +1,14 @@
+:host {
+  display: table-cell;
+}
+
+td {
+  min-width: 150px;
+  max-width: 0;
+  border-top: 1px solid #e3e3fa;
+  text-align: left;
+  padding: 16px 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}

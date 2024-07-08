@@ -1,8 +1,9 @@
-<app-list [list]="tasks">
+<app-list *ngIf="tasks | async as tableData">
   <app-list-header [headers]="headers"></app-list-header>
-  <app-list-row *ngFor="let row of tasks | async">
+  <app-list-row *ngFor="let row of tableData">
     <app-list-cell>{{row.name}}</app-list-cell>
-    <app-list-cell>{{row.data_type | dataType}}</app-list-cell>
+    <app-list-cell [title]="row.data_type | dataType">{{row.data_type | dataType}}</app-list-cell>
     <app-list-cell>{{row.amount}}</app-list-cell>
+    <app-list-cell>{{row.status}}</app-list-cell>
   </app-list-row>
 </app-list>
